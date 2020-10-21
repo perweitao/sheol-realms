@@ -1,12 +1,20 @@
-
 const asyncRoutes = [
-  
+  {
+    path: '/PlaceHolder',
+    name: 'PlaceHolder',
+    component: 'Layout',
+    children: [
+      {
+        path: 'PlaceHolder',
+        component: 'placeHolder/index',
+        name: '占位页面',
+        meta: { title: '占位页面', icon: 'form' }
+      }
+    ]
+  },
 ]
 
-
-
 export default [
-  // get getRouters
   {
     url: '/menu/getRouters',
     type: 'get',

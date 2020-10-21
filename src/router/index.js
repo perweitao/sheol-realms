@@ -35,9 +35,6 @@ export const constantRoutes = [
     component: () => import('@/views/error-page/401'),
     hidden: true
   },
-
-
-
   {
     path: '/',
     name: 'Home',
@@ -52,20 +49,20 @@ export const constantRoutes = [
       }
     ]
   },
-  {
-    path: '/PlaceHolder',
-    name: 'PlaceHolder',
-    component: Layout,
-    redirect:'/PlaceHolder',
-    children: [
-      {
-        path: 'PlaceHolder',
-        component: () => import('@/views/placeHolder/index'),
-        name: '占位页面',
-        meta: { title: '占位页面', icon: 'form' }
-      }
-    ]
-  },
+  // {
+  //   path: '/PlaceHolder',
+  //   name: 'PlaceHolder',
+  //   component: Layout,
+  //   redirect:'/PlaceHolder',
+  //   children: [
+  //     {
+  //       path: 'PlaceHolder',
+  //       component: () => import('@/views/placeHolder/index'),
+  //       name: '占位页面',
+  //       meta: { title: '占位页面', icon: 'form' }
+  //     }
+  //   ]
+  // },
   {
     name: "System",
     path: "/System",
@@ -111,7 +108,6 @@ export const asyncRoutes = [
 ]
 
 const createRouter = () => new VueRouter({
-  // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })
@@ -121,7 +117,7 @@ const router = createRouter()
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
 export function resetRouter() {
   const newRouter = createRouter()
-  router.matcher = newRouter.matcher // reset router
+  router.matcher = newRouter.matcher
 }
 
 export default router
