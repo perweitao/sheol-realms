@@ -61,32 +61,47 @@ const asyncRoutes = [
     meta: { title: "勾魂管理", icon: "system" },
     children: [
       {
+        name: "SheetEnchantment",
+        path: "/SheetEnchantment",
+        redirect: '/YetEnchantment',
+        hidden: false,
+        // component: 'sheolRealms/Enchantment/SheetEnchantment',
+        meta: { title: "勾魂工单", icon: "peoples" },
+      },
+      {
         name: "YetEnchantment",
         path: "/YetEnchantment",
-        hidden: false,
+        hidden: true,
         component: 'sheolRealms/Enchantment/YetEnchantment',
         meta: { title: "未勾魂", icon: "peoples" },
       },
       {
         name: "AlreadyDistribute",
         path: "/AlreadyDistribute",
-        hidden: false,
+        hidden: true,
         component: 'sheolRealms/Enchantment/AlreadyDistribute',
         meta: { title: "已分配", icon: "peoples" },
       },
       {
         name: 'AlreadyEnchantment',
         path: '/AlreadyEnchantment',
-        hidden: false,
+        hidden: true,
         component: 'sheolRealms/Enchantment/AlreadyEnchantment',
         meta: { title: '已勾魂', icon: 'peoples' }
+      },
+      {
+        name: 'CheckSheet',
+        path: '/CheckSheet',
+        hidden: true,
+        component: 'sheolRealms/Enchantment/CheckSheet',
+        meta: { title: '查看工单', icon: 'peoples' }
       },
       {
         name: 'AlreadyCheckBack',
         path: '/AlreadyCheckBack',
         hidden: false,
         component: 'sheolRealms/Enchantment/AlreadyCheckBack',
-        meta: { title: '已退单', icon: 'peoples' }
+        meta: { title: '已退工单', icon: 'peoples' }
       },
     ]
   },
