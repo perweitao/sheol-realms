@@ -4,6 +4,7 @@ import Layout from '@/layout'
 Vue.use(VueRouter)
 
 export const constantRoutes = [
+  // 重定向
   {
     path: '/redirect',
     component: Layout,
@@ -15,16 +16,22 @@ export const constantRoutes = [
       }
     ]
   },
+
+  // 登录页面
   {
     path: '/login',
     component: () => import('@/views/login/index'),
     hidden: true
   },
+
+  // 自动重定向
   {
     path: '/auth-redirect',
     component: () => import('@/views/login/auth-redirect'),
     hidden: true
   },
+
+  // 404页面
   {
     path: '/404',
     component: () => import('@/views/error-page/404'),
@@ -35,59 +42,24 @@ export const constantRoutes = [
     component: () => import('@/views/error-page/401'),
     hidden: true
   },
+
+  // 首页
   {
     path: '/',
     name: 'Home',
     component: Layout,
-    redirect:'/Home',
+    redirect: '/Home',
     children: [
       {
         path: 'Home',
-        component: () => import('@/views/home/index'),
+        component: () => import('@/views/sheolRealms/Home/index'),
         name: '首页',
         meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
   },
-  // {
-  //   path: '/PlaceHolder',
-  //   name: 'PlaceHolder',
-  //   component: Layout,
-  //   redirect:'/PlaceHolder',
-  //   children: [
-  //     {
-  //       path: 'PlaceHolder',
-  //       component: () => import('@/views/placeHolder/index'),
-  //       name: '占位页面',
-  //       meta: { title: '占位页面', icon: 'form' }
-  //     }
-  //   ]
-  // },
-  {
-    name: "System",
-    path: "/System",
-    hidden: false,
-    component: Layout,
-    alwaysShow: true,
-    meta: { title: "系统管理", icon: "system" },
-    children: [
-      {
-        name: "Role",
-        path: "role",
-        hidden: false,
-        component: () => import('@/views/role/index'),
-        meta: { title: "角色管理", icon: "peoples" }
-      },
-      {
-        name: "Menu",
-        path: "menu",
-        hidden: false,
-        component: () => import('@/views/menu/index'),
-        meta: { title: "菜单管理", icon: "tree-table" }
-      }
-    ]
-  },
 
+  // 个人信息
   {
     path: '/profile',
     component: Layout,
@@ -104,7 +76,7 @@ export const constantRoutes = [
   }
 ]
 export const asyncRoutes = [
-  
+
 ]
 
 const createRouter = () => new VueRouter({
