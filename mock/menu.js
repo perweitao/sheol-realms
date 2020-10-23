@@ -1,20 +1,4 @@
 const asyncRoutes = [
-
-  // {
-  //   path: '/ffff',
-  //   name: 'placeHolder',
-  //   component: 'Layout',
-  //   children: [
-  //     {
-  //       path: 'placeHolder',
-  //       component: 'placeHolder',
-  //       name: 'placeHolder',
-  //       meta: { title: '占位符', icon: 'dashboard', affix: true }
-  //     }
-  //   ]
-  // },
-
-
   // 生死簿
   {
     name: "Obituary",
@@ -63,31 +47,9 @@ const asyncRoutes = [
       {
         name: "SheetEnchantment",
         path: "/SheetEnchantment",
-        redirect: '/YetEnchantment',
+        component: 'sheolRealms/Enchantment',
         hidden: false,
-        // component: 'sheolRealms/Enchantment/SheetEnchantment',
         meta: { title: "勾魂工单", icon: "peoples" },
-      },
-      {
-        name: "YetEnchantment",
-        path: "/YetEnchantment",
-        hidden: true,
-        component: 'sheolRealms/Enchantment/YetEnchantment',
-        meta: { title: "未勾魂", icon: "peoples" },
-      },
-      {
-        name: "AlreadyDistribute",
-        path: "/AlreadyDistribute",
-        hidden: true,
-        component: 'sheolRealms/Enchantment/AlreadyDistribute',
-        meta: { title: "已分配", icon: "peoples" },
-      },
-      {
-        name: 'AlreadyEnchantment',
-        path: '/AlreadyEnchantment',
-        hidden: true,
-        component: 'sheolRealms/Enchantment/AlreadyEnchantment',
-        meta: { title: '已勾魂', icon: 'peoples' }
       },
       {
         name: 'CheckSheet',
@@ -114,19 +76,12 @@ const asyncRoutes = [
     meta: { title: "审判断案", icon: "system" },
     children: [
       {
-        name: "YetTrial",
-        path: "/YetTrial",
+        name: "TrialSystem",
+        path: "/TrialSystem",
         hidden: false,
-        component: 'sheolRealms/Trial/YetTrial',
-        meta: { title: "待审判", icon: "peoples" },
+        component: 'sheolRealms/Trial',
+        meta: { title: "审判断案", icon: "peoples" },
       },
-      {
-        name: "AlreadyTrial",
-        path: "/AlreadyTrial",
-        hidden: false,
-        component: 'sheolRealms/Trial/AlreadyTrial',
-        meta: { title: "已审判", icon: "peoples" },
-      }
     ]
   },
 
