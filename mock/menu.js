@@ -73,7 +73,7 @@ const asyncRoutes = [
     name: "Trial",
     path: '/Trial',
     component: 'Layout',
-    meta: { title: "审判断案", icon: "system" },
+    // meta: { title: "审判断案", icon: "system" },
     children: [
       {
         name: "TrialSystem",
@@ -114,7 +114,7 @@ const asyncRoutes = [
     name: "Mengpo",
     path: '/Mengpo',
     component: 'Layout',
-    meta: { title: "孟婆汤", icon: "system" },
+    // meta: { title: "孟婆汤", icon: "system" },
     children: [
       {
         name: "MengpoSoup",
