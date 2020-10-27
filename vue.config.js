@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const defaultSettings = require('./src/settings.js')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+// const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -12,7 +12,7 @@ const port = process.env.production || process.env.npm_config_port || 9527 // de
 
 module.exports = {
   publicPath: './',
-  outputDir: 'systemMamagement',
+  outputDir: 'sheol-realms',
   assetsDir: 'static',
   productionSourceMap: false,
   devServer: {
@@ -50,14 +50,14 @@ module.exports = {
       })
       .end()
 
-    config.module
-      .rule('vue')
-      .use('vue-loader')
-      .loader('vue-loader')
-      .tap(options => {
-        options.compilerOptions.preserveWhitespace = true
-        return options
-      })
-      .end()
+    // config.module
+    //   .rule('vue')
+    //   .use('vue-loader')
+    //   .loader('vue-loader')
+    //   .tap(options => {
+    //     options.compilerOptions.preserveWhitespace = true
+    //     return options
+    //   })
+    //   .end()
   }
 }

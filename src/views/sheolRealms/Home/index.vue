@@ -1,5 +1,5 @@
 <template>
-  <div class="content-home"></div>
+  <div class="home">this is home content</div>
 </template>
 
 <script>
@@ -17,5 +17,8 @@ export default {
 }
 </script>
 
-<style lang='less' scoped>
+<style lang='scss' scoped>
+.home {
+  border: 1px solid #000;
+}
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "management_system",
+  "name": "sheol-realms",
   "version": "0.1.0",
   "author": "caoweitao",
   "private": true,
@@ -16,7 +16,6 @@
     "babel-core": "^6.26.3",
     "element-ui": "^2.13.1",
     "js-cookie": "^2.2.1",
-    "less-loader": "^6.1.1",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "vue": "^2.6.11",
