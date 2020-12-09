@@ -25,7 +25,6 @@ router.beforeEach(async (to, from, next) => {
         next()
       } else {
         try {
-          debugger
           // note: roles must be a object array! such as: ['admin'] or ,['developer','editor']
           const { roles } = await store.dispatch('user/getInfo')
           const accessRoutes = await store.dispatch('permission/generateRoutes', roles)
