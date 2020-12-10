@@ -6,7 +6,7 @@ const defaultSettings = require('./src/settings.js')
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-const name = defaultSettings.title || '后台管理系统' // page title
+const name = defaultSettings.title || '地府管理系统' // page title
 
 const port = process.env.production || process.env.npm_config_port || 9527 // dev port
 
